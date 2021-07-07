@@ -1,0 +1,130 @@
+.navigation {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+
+  border-radius: 10px;
+  box-sizing: initial;
+  border-left: 5px solid #4d5bf9;
+  background: #4d5bf9;
+  transition: width 0, 5s;
+  overflow-x: hidden;
+}
+.list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+li a .icon,
+.list a .title {
+  position: relative;
+  display: block;
+  height: 60px;
+  text-align: center;
+}
+
+li a .icon {
+  min-width: 60px;
+  line-height: 70px;
+}
+
+li a .title {
+  line-height: 60px;
+  white-space: normal;
+}
+
+li a .icon #icon {
+  font-size: 1.5em;
+}
+
+li.active {
+  background: #fff;
+}
+
+li.active a {
+  color: #333;
+}
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #4d5bfd;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle {
+  color: #fff;
+  font-size: 34px;
+}
+
+li b:nth-child(1) {
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+li b:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  background: #4d5bf9;
+}
+
+li b:nth-child(2) {
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+li b:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  background: #4d5bf9;
+}
+
+li.active b:nth-child(1),
+li.active b:nth-child(2) {
+  display: block;
+}
